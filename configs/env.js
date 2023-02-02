@@ -1,11 +1,11 @@
 window.env = {
    api: {
-      authUrl: 'https://www.heavenexchange.io/api/v2/account',
-      tradeUrl: 'https://www.heavenexchange.io/api/v2/exchange',
-      finexUrl: 'https://www.heavenexchange.io/api/v2/finex',
-      applogicUrl: 'https://www.heavenexchange.io/api/v2/applogic',
-      rangerUrl: 'wss://www.heavenexchange.io/api/v2/ranger',
-      p2pUrl: 'https://www.heavenexchange.io/api/v2/p2p',
+      authUrl: 'https://api.heavenexchange.io/api/v2/account',
+      tradeUrl: 'https://api.heavenexchange.io/api/v2/exchange',
+      finexUrl: 'https://api.heavenexchange.io/api/v2/finex',
+      applogicUrl: 'https://api.heavenexchange.io/api/v2/applogic',
+      rangerUrl: 'wss://api.heavenexchange.io/api/v2/ranger',
+      p2pUrl: 'https://api.heavenexchange.io/api/v2/p2p',
       newsUrl: 'https://news.digiassetindo.com/ghost/api/v3/content/posts',
    },
    minutesUntilAutoLogout: '35',
