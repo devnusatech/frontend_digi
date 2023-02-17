@@ -7,6 +7,7 @@ window.env = {
       rangerUrl: 'wss://api.heavenexchange.io/api/v2/ranger',
       p2pUrl: 'https://api.heavenexchange.io/api/v2/p2p',
       newsUrl: 'https://news.digiassetindo.com/ghost/api/v3/content/posts',
+      membershipUrl: 'http://149.28.140.240:8080/v2/tier_user',
    },
    minutesUntilAutoLogout: '35',
    withCredentials: true,
