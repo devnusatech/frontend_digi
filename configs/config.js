@@ -1,6 +1,6 @@
 'use strict';
-((location) => {
-   const { search, origin, pathname, replace } = location;
+(location => {
+   const { hostname, search, origin, pathname, replace } = location;
 
    // const hostUrl = hostname === 'localhost' ? 'http://localhost:9002' : origin;
    const hostUrl = 'https://api.heavenexchange.io';
@@ -15,15 +15,8 @@
    if (pathname === '/magic-link') {
       if (token) {
          const sendAccessToken = new XMLHttpRequest();
-         sendAccessToken.open(
-            'POST',
-            `${hostUrl}/api/v2/account/identity/users/access`,
-            false
-         );
-         sendAccessToken.setRequestHeader(
-            'Content-Type',
-            'application/json: charset=utf-8'
-         );
+         sendAccessToken.open('POST', `${hostUrl}/api/v2/account/identity/users/access`, false);
+         sendAccessToken.setRequestHeader('Content-Type', 'application/json: charset=utf-8');
          sendAccessToken.send(JSON.stringify({ whitelink_token: token }));
       } else {
          replace(origin);
@@ -36,10 +29,7 @@
          }
       } else if (fetchConfig.status === 471 && pathname !== '/restriction') {
          replace(`${origin}/restriction`);
-      } else if (
-         unavailableServerError.has(fetchConfig.status) &&
-         pathname !== '/maintenance'
-      ) {
+      } else if (unavailableServerError.has(fetchConfig.status) && pathname !== '/maintenance') {
          replace(`${origin}/maintenance`);
       }
    }
